@@ -1,11 +1,23 @@
-<div align="center">
+# Valeria's Catering & Events (valeriascatering.com)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Bespoke modern Filipino haute cuisine catering and event planning for luxury weddings, debuts, and grand corporate celebrations across the Philippines.
 
-  <h1>Built with AI Studio</h2>
+## Tech Stack
+- **Frontend**: React 19, TypeScript, Tailwind CSS, Motion, Lucide Icons
+- **Backend**: Express, Node.js, @google/genai (Gemini Menu Concierge)
+- **Database**: Google Firebase Firestore (Project: `valerias-catering`)
+- **Deployment**: Firebase Hosting & Cloud Run
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Run Locally
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-</div>
+2. Set the `GEMINI_API_KEY` in `.env.local` to your Gemini API key (optional for AI Menu Concierge).
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```

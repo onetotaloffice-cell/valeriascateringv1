@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "CateringInquiry": {
+      "title": "CateringInquiry",
+      "description": "Customer tasting appointments, quote requests, and event booking inquiries",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "eventType": { "type": "string" },
+        "guestCount": { "type": "number" },
+        "eventDate": { "type": "string" },
+        "packageSelected": { "type": "string" },
+        "budget": { "type": "string" },
+        "notes": { "type": "string" },
+        "status": { "type": "string", "enum": ["New Inquiry", "Confirmed Tasting", "Quote Sent", "Archived"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "email", "phone", "eventType", "guestCount", "eventDate", "packageSelected", "createdAt"]
+    },
+    "AiProposal": {
+      "title": "AiProposal",
+      "description": "Saved bespoke AI event proposals and tasting menus",
+      "type": "object",
+      "properties": {
+        "eventType": { "type": "string" },
+        "guestCount": { "type": "number" },
+        "budgetRange": { "type": "string" },
+        "dietaryPreferences": { "type": "string" },
+        "proposalText": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["eventType", "guestCount", "proposalText", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/inquiries/{inquiryId}": {
+      "schema": "CateringInquiry",
+      "description": "Collection of client tasting appointments and event inquiries"
+    },
+    "/proposals/{proposalId}": {
+      "schema": "AiProposal",
+      "description": "Saved AI catering proposals"
+    }
+  }
+}
