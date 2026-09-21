@@ -1,4 +1,4 @@
-# Valeria's Catering & Events (valeriascatering.com)
+# Valeria's Catering (valeriascatering.com)
 
 Bespoke modern Filipino haute cuisine catering and event planning for luxury weddings, debuts, and grand corporate celebrations across the Philippines.
 
