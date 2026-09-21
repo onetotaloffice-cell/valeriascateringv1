@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { UtensilsCrossed, Calendar, Sparkles, Menu, X, Shield, PhoneCall } from "lucide-react";
+import { Calendar, Sparkles, Menu, X, Shield, PhoneCall } from "lucide-react";
 
 interface HeaderProps {
   onOpenBooking: () => void;
@@ -28,8 +28,12 @@ export default function Header({ onOpenBooking, onOpenAdmin, activeView, setActi
           onClick={() => setActiveView("home")} 
           className="flex items-center gap-3 text-left group cursor-pointer"
         >
-          <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 text-stone-950 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-            <UtensilsCrossed className="w-6 h-6" />
+          <div className="w-11 h-11 rounded-xl overflow-hidden shadow-lg border border-amber-500/30 group-hover:scale-105 transition-transform shrink-0 bg-stone-900 flex items-center justify-center">
+            <img 
+              src="/logo.jpg" 
+              alt="Valeria's Catering Logo" 
+              className="w-full h-full object-cover" 
+            />
           </div>
           <div>
             <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-amber-400 transition-colors">

@@ -1,5 +1,5 @@
 import React from "react";
-import { UtensilsCrossed, Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
 
 interface FooterProps {
   setActiveView: (view: string) => void;
@@ -12,8 +12,12 @@ export default function Footer({ setActiveView, onOpenBooking }: FooterProps) {
       <div className="max-w-[1720px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
         <div className="space-y-4 md:col-span-1">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-500 text-stone-950 flex items-center justify-center font-bold">
-              <UtensilsCrossed className="w-5 h-5" />
+            <div className="w-10 h-10 rounded-xl overflow-hidden border border-amber-500/30 shrink-0 bg-stone-900 flex items-center justify-center shadow-md">
+              <img 
+                src="/logo.jpg" 
+                alt="Valeria's Catering" 
+                className="w-full h-full object-cover" 
+              />
             </div>
             <div>
               <span className="font-serif text-lg font-bold text-white">Valeria's Catering</span>
