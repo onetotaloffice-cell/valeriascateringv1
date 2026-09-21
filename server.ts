@@ -73,7 +73,7 @@ const memoryInquiries: any[] = [
 ];
 
 const app = express();
-const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
+const PORT = 3000;
 
 app.use(express.json());
 
@@ -234,7 +234,7 @@ async function startServer() {
   } else {
     const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath));
-    app.get("*all", (req, res) => {
+    app.get("*", (req, res) => {
       res.sendFile(path.join(distPath, "index.html"));
     });
     console.log("Serving production static assets from dist folder.");
